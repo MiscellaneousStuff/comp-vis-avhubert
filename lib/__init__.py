@@ -83,7 +83,8 @@ def load_audio(fname: str, mono: bool=True, sr=16_000) -> np.ndarray:
 def load_phonemes(
         textgrid_fname: str,
         audio_feats: np.ndarray,
-        phoneme_dict: List[str]) -> np.ndarray:
+        phoneme_dict: List[str],
+        temporal_scale: int = 100) -> np.ndarray:
     """Returns the pre-processed phonemes for an audio file, for
     the same `seq_len` as the audio features."""
     tg = TextGrid(textgrid_fname)
@@ -104,9 +105,11 @@ def load_phonemes(
             phone = phone[:-1]
         ph_id = phoneme_dict.index(phone)
 
-        phone_win_start    = int(xmin * 100)
+        phone_win_start    = int(xmin * temporal_scale)
         phone_duration     = xmax - xmin
-        phone_win_duration = int(math.ceil(phone_duration * 100))
+        # print("PHONE LOWER THAN INPUT FRAME SIZE:", phone_win_duration < 0.04)
+
+        phone_win_duration = int(math.ceil(phone_duration * temporal_scale))
         phone_win_end      = phone_win_start + phone_win_duration
 
         phone_ids[phone_win_start:phone_win_end] = ph_id
