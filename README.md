@@ -13,6 +13,7 @@ target than the S2S sub-word speech prediction.
 
 ### Directory Breakdown
 
+- `av_hubert/`: Meta AV HuBERT submodule
 - `split.py`: Splits a source MP4 video into 10 second clips. This is because
   the AV HuBERT model works best with up to 10 second clips.
 - `main.ipynb`: Contains all of the initial experimental code for this project...
@@ -22,6 +23,8 @@ target than the S2S sub-word speech prediction.
   - Dataset Handling Code (Load phonemes, audio features, raw dlib facial
     landmarks, OpenAI Whisper Large word-level timestamps)
   - Auxilliary mel spectrogram prediction experiments for more robust training
+- `base_vox_433h`: AV HuBERT BASE model
+- `self_large_vox_433h`: Self-Trained AV HuBERT LARGE model (Best performing)
 
 ### GPT-4 Phoneme "Beam Search"
 
