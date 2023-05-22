@@ -11,6 +11,11 @@ This research explores using these extracted features for phoneme prediction,
 which this work hypothesizes acts as a more robust speech representation
 target than the S2S sub-word speech prediction.
 
+### Directory Breakdown
+
+- `split.py`: Splits a source MP4 video into 10 second clips. This is because
+  the AV HuBERT model works best with up to 10 second clips.
+
 ### GPT-4 Phoneme "Beam Search"
 
 The work also explores using GPT4 as a form of phoneme beam search. This
