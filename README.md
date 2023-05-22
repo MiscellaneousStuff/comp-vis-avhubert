@@ -27,16 +27,20 @@ gives it an advantage over existing methods.
 ### Classifiers
 
 Different classifiers are explored over the AV HuBERT features:
-1. Deep Neural Network (2 layer deep neural network with 256 hidden dimension
+1. PyTorch Deep Neural Network (2 layer deep neural network with 256 hidden dimension
    and ReLU activation)
-2. Support Vector Machine (Linear, Radial)
+2. Support Vector Machine (Linear, Radial Basis, Poly, Sigmoid)
+3. Random Forest
+4. MLP (sklearn)
 
 ### Visual Features
 
 This work explores two main types of visual features:
-1. AV HuBERT Embeddings (Generated from their VoxCeleb3, 
+1. `AV HuBERT` Embeddings (Generated from their VoxCeleb3, 
    fine tuned model `base_vox_433h`.)
-2. What other feature here?
+   - BASE  (768 dime)
+   - LARGE (1,568 dim)
+2. Base `dlib` facial landmarks
 
 ### Datasets
 
@@ -50,3 +54,6 @@ Two datasets are used for this work:
 2. Personal Dataset (This is a personal dataset used for initial experiments
    with a mixture of celebrities speaking, with the videos being chosen for
    the varieties of phonemes expressed during the videos.)
+3. Jordan Peterson Shorts Clip (Shorts clip of Jordan Peterson discussing
+   communism. Good clip to use due to variety of phonemes present within the
+   dataset.)
