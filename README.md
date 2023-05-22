@@ -38,8 +38,8 @@ Different classifiers are explored over the AV HuBERT features:
 This work explores two main types of visual features:
 1. `AV HuBERT` Embeddings (Generated from their VoxCeleb3, 
    fine tuned model `base_vox_433h`.)
-   - BASE  (768 dime)
-   - LARGE (1,568 dim)
+   - BASE  (768 dim)
+   - Self-Trained LARGE (1024 dim)
 2. Base `dlib` facial landmarks
 
 ### Datasets
@@ -51,9 +51,11 @@ Two datasets are used for this work:
    needs to be obtained before using this dataset for research.).
    As the AV HuBERT model used in this work has been fine tuned on this dataset,
    only the test set portion of this dataset is used for evaluation for fairness.
-2. Personal Dataset (This is a personal dataset used for initial experiments
-   with a mixture of celebrities speaking, with the videos being chosen for
-   the varieties of phonemes expressed during the videos.)
-3. Jordan Peterson Shorts Clip (Shorts clip of Jordan Peterson discussing
+2. Jordan Peterson Shorts Clip (Shorts clip of Jordan Peterson discussing
    communism. Good clip to use due to variety of phonemes present within the
    dataset.)
+<!--
+3. Personal Dataset (This is a personal dataset used for initial experiments
+   with a mixture of celebrities speaking, with the videos being chosen for
+   the varieties of phonemes expressed during the videos.)
+-->
