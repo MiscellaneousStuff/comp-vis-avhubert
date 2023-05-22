@@ -15,6 +15,13 @@ target than the S2S sub-word speech prediction.
 
 - `split.py`: Splits a source MP4 video into 10 second clips. This is because
   the AV HuBERT model works best with up to 10 second clips.
+- `main.ipynb`: Contains all of the initial experimental code for this project...
+  - AV HuBERT Feature Extraction (Base, Self-Trained Large): Generate features
+    for 10 second clips
+  - SKLearn and PyTorch classifier training code
+  - Dataset Handling Code (Load phonemes, audio features, raw dlib facial
+    landmarks, OpenAI Whisper Large word-level timestamps)
+  - Auxilliary mel spectrogram prediction experiments for more robust training
 
 ### GPT-4 Phoneme "Beam Search"
 
@@ -45,13 +52,18 @@ This work explores two main types of visual features:
 ### Datasets
 
 Two datasets are used for this work:
+<!--
 1. VoxCeleb (This is a standard dataset used in Lip Reading research as it
    contains many videos with the lips of celebrities speaking clearly visible.
    LRS3 is also considered, but not explored in this work as written consent
    needs to be obtained before using this dataset for research.).
    As the AV HuBERT model used in this work has been fine tuned on this dataset,
    only the test set portion of this dataset is used for evaluation for fairness.
-2. Jordan Peterson Shorts Clip (Shorts clip of Jordan Peterson discussing
+   VoxCeleb2 was considered at first, but the audio visual dataset is restricted
+   and requires a password.
+-->
+1. Joradn Peterson Lecture
+2. Jordan Peterson (The False Appeal of Communism) (Shorts clip of Jordan Peterson discussing
    communism. Good clip to use due to variety of phonemes present within the
    dataset.)
 <!--
