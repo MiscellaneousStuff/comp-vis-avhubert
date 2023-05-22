@@ -1,8 +1,12 @@
 {
-    "train": [
+    "vids": [
         {
             "title": "The False Appeal of Communism",
             "url": "https://www.youtube.com/watch?v=wsDmwoOrpR8"
+        },
+        {
+            "title": "Jordan Peterson on the meaning of life for men. MUST WATCH",
+            "url": "https://www.youtube.com/watch?v=NX2ep5fCJZ8"
         }
     ]
 }
