@@ -35,7 +35,7 @@ def split_video_into_clips(input_file, output_directory, clip_duration=10):
     video.close()
 
 # Usage example
-input_file = "dataset/wsDmwoOrpR8/The False Appeal of Communism.mp4"
+input_file = "dataset/NX2ep5fCJZ8/Jordan Peterson on the meaning of life for men MUST WATCH.mp4"
 output_directory = "clips/"
 clip_duration = 10  # Duration of each clip in seconds
 

@@ -65,10 +65,13 @@ Two datasets are used for this work:
    VoxCeleb2 was considered at first, but the audio visual dataset is restricted
    and requires a password.
 -->
-1. Joradn Peterson Lecture
-2. Jordan Peterson (The False Appeal of Communism) (Shorts clip of Jordan Peterson discussing
+1. Jordan Peterson Lecture (30fps)
+   This dataset has a duration of ~= 11 mins and 24 secs or 684 secs and a sequence length of
+   16,416 frames.
+2. Jordan Peterson (24fps) (The False Appeal of Communism) (Shorts clip of Jordan Peterson discussing
    communism. Good clip to use due to variety of phonemes present within the
    dataset.)
+   This dataset has a duration of ~= 51 seconds and a sequence length of 1,234 frames.
 <!--
 3. Personal Dataset (This is a personal dataset used for initial experiments
    with a mixture of celebrities speaking, with the videos being chosen for
