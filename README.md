@@ -3,13 +3,13 @@
 ## About
 
 This is my submission for the Computer Vision module for the University
-of Portsmouth MEng Computer Science module. This research explores using
-the SOTA AV HuBERT model, which is used for ASR for Lip Reading and also
-works as a useful feature extractor for images for multimodal tasks.
+of Portsmouth MEng Computer Science course. This research explores using
+the SOTA AV-HuBERT model, which is used for ASR for Lip Reading and also
+works as a useful feature extractor for input video frames audio-visual tasks.
 
-This research explores using these extracted features for phoneme prediction,
-which this work hypothesizes acts as a more robust speech representation
-target than the S2S sub-word speech prediction.
+This research explores using these extracted features for phoneme prediction
+and mel-spectrogram synthesis. The phoneme classification confusion is assessed
+to determine where classifiers fall short.
 
 ### Directory Breakdown
 
@@ -37,17 +37,16 @@ gives it an advantage over existing methods. -->
 ### Classifiers
 
 Different classifiers are explored over the AV HuBERT features:
-1. PyTorch Deep Neural Network (2 layer deep neural network with 256 hidden dimension
-   and ReLU activation)
+1. PyTorch Deep Neural Network (1 hidden layer deep neural network with 256 or 512 hidden dimension
+   and ReLU activation and then softmax)
 2. Support Vector Machine (Linear, Radial Basis, Poly, Sigmoid)
 3. Random Forest
-4. MLP (sklearn)
 
 ### Visual Features
 
 This work explores two main types of visual features:
 1. `AV HuBERT` Embeddings (Generated from their VoxCeleb3, 
-   fine tuned model `base_vox_433h`.)
+   fine tuned model `base_vox_433h`, `self_large_vox_433h`.)
    - BASE  (768 dim)
    - Self-Trained LARGE (1024 dim)
 2. Base `dlib` facial landmarks
@@ -67,11 +66,11 @@ Two datasets are used for this work:
 -->
 1. Jordan Peterson Lecture (30fps)
    This dataset has a duration of ~= 11 mins and 24 secs or 684 secs and a sequence length of
-   16,416 frames.
+   ~20,000 frames.
 2. Jordan Peterson (24fps) (The False Appeal of Communism) (Shorts clip of Jordan Peterson discussing
    communism. Good clip to use due to variety of phonemes present within the
    dataset.)
-   This dataset has a duration of ~= 51 seconds and a sequence length of 1,234 frames.
+   This dataset has a duration of ~= 51 seconds and a sequence length of 1,233 frames.
 <!--
 3. Personal Dataset (This is a personal dataset used for initial experiments
    with a mixture of celebrities speaking, with the videos being chosen for
