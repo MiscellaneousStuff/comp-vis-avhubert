@@ -26,13 +26,13 @@ target than the S2S sub-word speech prediction.
 - `base_vox_433h`: AV HuBERT BASE model
 - `self_large_vox_433h`: Self-Trained AV HuBERT LARGE model (Best performing)
 
-### GPT-4 Phoneme "Beam Search"
+<!-- ### GPT-4 Phoneme "Beam Search"
 
 The work also explores using GPT4 as a form of phoneme beam search. This
 work hypothesizes that GPT4's ability to compose phonemes together into
 sensible sentences based on GPT4's large training dataset and ability
 to contextually understand phonemes and generate plausable sentences
-gives it an advantage over existing methods.
+gives it an advantage over existing methods. -->
 
 ### Classifiers
 
