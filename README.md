@@ -25,6 +25,7 @@ to determine where classifiers fall short.
   - Auxilliary mel spectrogram prediction experiments for more robust training
 - `base_vox_433h`: AV HuBERT BASE model
 - `self_large_vox_433h`: Self-Trained AV HuBERT LARGE model (Best performing)
+- `phoneme_dict.txt`: ARPABET phoneme dictionary
 
 <!-- ### GPT-4 Phoneme "Beam Search"
 
