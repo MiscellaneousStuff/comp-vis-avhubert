@@ -34,8 +34,13 @@ def split_video_into_clips(input_file, output_directory, clip_duration=10):
     # Close the original video file
     video.close()
 
-# Usage example
-input_file = "dataset/NX2ep5fCJZ8/Jordan Peterson on the meaning of life for men MUST WATCH.mp4"
+# # Usage example
+# input_file = "dataset/NX2ep5fCJZ8/Jordan Peterson on the meaning of life for men MUST WATCH.mp4"
+# output_directory = "clips/"
+# clip_duration = 10  # Duration of each clip in seconds
+
+# # Usage example
+input_file = "dataset/DC0faZiBcG0/Lecture 2015 Personality Lecture 06 Depth Psychology Carl Jung (Part 01).mp4"
 output_directory = "clips/"
 clip_duration = 10  # Duration of each clip in seconds
 
