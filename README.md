@@ -37,11 +37,11 @@ sensible sentences based on GPT4's large training dataset and ability
 to contextually understand phonemes and generate plausable sentences
 gives it an advantage over existing methods. -->
 
-### Classifiers
+### Models
 
-Different classifiers are explored over the AV HuBERT features:
+Different models are explored over the dlib and AV HuBERT features:
 1. PyTorch Deep Neural Network (1 hidden layer deep neural network with 256 or 512 hidden dimension
-   and ReLU activation and then softmax)
+   and ReLU activation and then softmax). Additional projection from hidden layer to predict mel-spectrogram features.
 2. Support Vector Machine (Linear, Radial Basis, Poly, Sigmoid)
 3. Random Forest
 
