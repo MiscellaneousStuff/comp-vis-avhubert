@@ -14,6 +14,8 @@ to determine where classifiers fall short.
 ### Directory Breakdown
 
 - `av_hubert/`: Meta AV HuBERT submodule
+- `stable-ts/`: OpenAI Whisper with word-level timestamp generation
+- `lib/`: Collection of utility files used for dataset preprocessing and dataset source downloading
 - `split.py`: Splits a source MP4 video into 10 second clips. This is because
   the AV HuBERT model works best with up to 10 second clips.
 - `main.ipynb`: Contains all of the initial experimental code for this project...
@@ -23,8 +25,8 @@ to determine where classifiers fall short.
   - Dataset Handling Code (Load phonemes, audio features, raw dlib facial
     landmarks, OpenAI Whisper Large word-level timestamps)
   - Auxilliary mel spectrogram prediction experiments for more robust training
-- `base_vox_433h`: AV HuBERT BASE model
-- `self_large_vox_433h`: Self-Trained AV HuBERT LARGE model (Best performing)
+- `base_vox_433h.pt`: AV HuBERT BASE model
+- `self_large_vox_433h.pt`: Self-Trained AV HuBERT LARGE model (Best performing)
 - `phoneme_dict.txt`: ARPABET phoneme dictionary
 
 <!-- ### GPT-4 Phoneme "Beam Search"
