@@ -11,6 +11,8 @@ This research explores using these extracted features for phoneme prediction
 and mel-spectrogram synthesis. The phoneme classification confusion is assessed
 to determine where classifiers fall short.
 
+Link to: [Paper](https://github.com/MiscellanoeusStuff/comp-vis-avhubert/blob/main/paper.pdf)
+
 ### Directory Breakdown
 
 - `av_hubert/`: Meta AV HuBERT submodule
